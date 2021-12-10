@@ -1,0 +1,26 @@
+<p>student works!</p>
+<div class="container">
+    <div class="jumbotron">
+        <a class="btn btn-primary" (click)="dsiplaySingleStudent($event)">show student</a>
+        <!-- <h1 *ngif="student.cgpa" !=0> -->
+        <h1>{{student.name}}</h1>
+        <h1>{{student.cgpa}}</h1>
+        <h1 [innerText]="student.location"></h1>
+        <img [src]="student.profilePic" [style.width.px]="maxWidth" [style.height.px]="maxHeight">
+        <!-- </h1> -->
+        <br>
+        <br>
+
+        <a class="btn btn-primary" (click)="dsiplayStudents($event)">show students</a>
+        <!-- <div *ngif="show"> -->
+        <div *ngFor="let student of students">
+            <h1>{{student.name}}</h1>
+            <h1>{{student.cgpa}}</h1>
+            <h1 [innerText]="student.location"></h1>
+            <img [src]="student.profilePic" [style.width.px]="maxWidth" [style.height.px]="maxHeight">
+        </div>
+
+        <!-- </div> -->
+
+    </div>
+</div>

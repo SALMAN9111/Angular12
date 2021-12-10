@@ -1,0 +1,13 @@
+<h1>login works!</h1>
+
+<form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
+    <input type="email" required #name="ngModel" pattern="[a-zA-Z]+$" name="name" placeholder="Enter name" ngModel>
+   
+    <br><span *ngIf="name.invalid && name.touched" style="color: red;">Please enter valid input</span><br>
+   
+    <input type="password" required #password="ngModel" name="password" minlength="8" placeholder="Enter password" ngModel>
+   
+    <br><span *ngIf="password.invalid && password.touched" style="color: red;">Please enter valid input</span><br>
+   
+    <button [disabled]="loginForm.invalid">Login</button>
+</form>

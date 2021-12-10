@@ -1,0 +1,21 @@
+<p>spring-api works!</p>
+<div class="jumbotron">
+  <form #postData="ngForm" (ngSubmit)="postHandler(postData.value)">
+    RollNo : <input type="text" name="rollNo" ngModel><br>
+    Name : <input type="text" name="name" ngModel><br>
+    Age : <input type="text" name="age" ngModel><br>
+    Email : <input type="text" name="email" ngModel><br>
+    Date : <input type="date" name="date" ngModel><br>
+    Gender <input type="radio" name="isMale" value="true" ngModel> Male
+    <input type="radio" name="isMale" value="false" ngModel> Female
+    <button class="btn btn-primary">Post</button>
+  </form>
+
+  <button (click)="getHandler()">Get</button>
+  <button (click)="putHandler()">Put</button>
+  
+  <button (click)="deleteHandler()">Delete</button>
+
+  <h4>{{data1}}</h4>
+
+</div>

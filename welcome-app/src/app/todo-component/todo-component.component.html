@@ -1,0 +1,13 @@
+<div>
+    <p>todo-component works!</p>
+    <input type="text" [(ngModel)]="currentItem" placeholder="addtodo" />
+    <a class="btn btn-primary" (click)="handleAddClick($event)">addTodo</a>
+
+    <ul>
+        <div class="container" *ngFor="let todo of todos;let indexId = index">
+            <li>
+                {{todo}} <button class="btn btn-danger" (click)="onDelete(indexId)">X</button>
+            </li>
+        </div>
+    </ul>
+</div>

@@ -1,0 +1,16 @@
+<div>
+<p>twoway-component works!</p>
+FirstName : <input type="text" [ngModel]="firstName" (ngModelChange)="firstNameChange($event)"/>
+LastName : <input type="text" [(ngModel)]="lastName"/>
+<div>
+    <h4>{{firstName}}</h4>
+    <h4>{{lastName}}</h4>
+</div>
+
+<br>
+
+<!-- <monocept-component-a></monocept-component-a> -->
+
+<sw-comp-a></sw-comp-a>
+<monocept-component-b></monocept-component-b>
+</div>
